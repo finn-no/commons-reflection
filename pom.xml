@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ - Copyright (2005-2006) Schibsted Søk AS
+ - $Id: project.xml 2296 2006-02-14 17:33:59Z magnuse $ 
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+      <groupId>schibstedsok</groupId>
+      <artifactId>commons-main</artifactId>
+      <version>1.8</version>
+    </parent>
+   
+    <modelVersion>4.0.0</modelVersion>
+    <name>Sesat Commons Reflection</name>
+    <groupId>sesat</groupId> 
+    <artifactId>commons-reflect</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <description>
+        Reflection utilities. 
+         Provides utilities to or faster implementations of classes found in java.lang.reflect
+    </description>
+    <url>https://dev.schibstedsok.no/maven2/SITE/schibstedsok-commons/commons-reflect/index.html</url>
+
+    <developers>
+        <developer>
+            <name>Michael Semb Wever</name>
+            <id>ssmiweve</id>
+            <email>mick@wever.org</email>
+            <organization>Schibsted Søk AS</organization>
+            <url>http://www.wever.org</url>
+            <timezone>+1</timezone>
+        </developer>
+    </developers>
+   
+    <dependencies>
+        <!--dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency-->
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.14</version>
+            <type>jar</type>
+            <!-- We can't package this because JBoss dictates the world to you,
+              -  And they're lazy bastards that haven't upgraded to log4j-1.2.13 yet.
+              -->
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>Sesam</id>
+            <name>Local Maven2 Repository</name>
+            <url>https://dev.schibstedsok.no/maven2</url>
+        </repository>
+    </repositories>
+</project>

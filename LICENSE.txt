@@ -1,8 +1,6 @@
                     GNU AFFERO GENERAL PUBLIC LICENSE
-              Last Call Draft (2) of Version 3, 14 August 2007
+                       Version 3, 19 November 2007
 
-THIS IS A DRAFT, NOT A PUBLISHED VERSION OF THE GNU AFFERO GENERAL PUBLIC
-LICENSE.
 
  Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies

@@ -20,9 +20,9 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
-      <groupId>schibstedsok</groupId>
+      <groupId>sesat</groupId>
       <artifactId>commons-main</artifactId>
-      <version>1.8</version>
+      <version>1.9-SNAPSHOT</version>
     </parent>
    
     <modelVersion>4.0.0</modelVersion>
@@ -36,7 +36,7 @@
         Reflection utilities. 
          Provides utilities to or faster implementations of classes found in java.lang.reflect
     </description>
-    <url>https://dev.schibstedsok.no/maven2/SITE/schibstedsok-commons/commons-reflect/</url>
+    <url>http://sesat.no/projects/sesat-commons/commons-reflect/</url>
 
     <developers>
         <developer>
@@ -70,9 +70,9 @@
     </dependencies>
     <repositories>
         <repository>
-            <id>Sesam</id>
-            <name>Local Maven2 Repository</name>
-            <url>https://dev.schibstedsok.no/maven2</url>
+            <id>Sesat</id>
+            <name>Sesat Maven2 Repository</name>
+            <url>http://sesat.no/maven2</url>
         </repository>
     </repositories>
 </project>

@@ -22,7 +22,7 @@
     <parent>
       <groupId>sesat</groupId>
       <artifactId>commons-main</artifactId>
-      <version>1.9-SNAPSHOT</version>
+      <version>1.9</version>
     </parent>
    
     <modelVersion>4.0.0</modelVersion>
@@ -37,7 +37,11 @@
          Provides utilities to or faster implementations of classes found in java.lang.reflect
     </description>
     <url>http://sesat.no/projects/sesat-commons/commons-reflect/</url>
-
+    <scm>
+        <connection>scm:svn:http://sesat.no/svn/sesat-commons/commons-reflect/trunk</connection>
+        <developerConnection>scm:svn:http://sesat.no/svn/sesat-commons/commons-reflect/trunk</developerConnection>
+        <url>http://sesat.no/svn/sesat-commons/commons-reflect/trunk</url>
+    </scm>
     <developers>
         <developer>
             <name>Michael Semb Wever</name>

@@ -34,7 +34,9 @@
 
     <description>
         Reflection utilities. 
-         Provides utilities to or faster implementations of classes found in java.lang.reflect
+         Provides utilities to or faster implementations of classes found in java.lang.reflect.
+
+         Openjdk request for inclusion: https://bugs.openjdk.java.net/show_bug.cgi?id=100120
     </description>
     <url>http://sesat.no/projects/sesat-commons/commons-reflect/</url>
     <scm>

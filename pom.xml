@@ -29,7 +29,7 @@
     <name>Sesat Commons Reflection</name>
     <groupId>sesat</groupId> 
     <artifactId>commons-reflect</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <description>
@@ -38,9 +38,9 @@
     </description>
     <url>http://sesat.no/projects/sesat-commons/commons-reflect/</url>
     <scm>
-        <connection>scm:svn:http://sesat.no/svn/sesat-commons/commons-reflect/tags/commons-reflect-1.0</connection>
-        <developerConnection>scm:svn:http://sesat.no/svn/sesat-commons/commons-reflect/tags/commons-reflect-1.0</developerConnection>
-        <url>http://sesat.no/svn/sesat-commons/commons-reflect/tags/commons-reflect-1.0</url>
+        <connection>scm:svn:http://sesat.no/svn/sesat-commons/commons-reflect/trunk</connection>
+        <developerConnection>scm:svn:http://sesat.no/svn/sesat-commons/commons-reflect/trunk</developerConnection>
+        <url>http://sesat.no/svn/sesat-commons/commons-reflect/trunk</url>
     </scm>
     <developers>
         <developer>

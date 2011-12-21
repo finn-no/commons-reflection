@@ -23,14 +23,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <parent>
-      <groupId>sesat</groupId>
-      <artifactId>commons-main</artifactId>
-      <version>1.9</version>
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
     <name>Commons Reflection</name>
+    <groupId>sesat</groupId>
     <artifactId>commons-reflect</artifactId>
     <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -52,7 +47,10 @@
         <developerConnection>scm:git:git://github.com/finn-no/commons-reflection/</developerConnection>
         <url>https://github.com/finn-no/commons-reflection</url>
     </scm>
-
+    <organization>
+        <name>FINN AS</name>
+        <url>http://tech.finn.no/</url>
+    </organization>
     <developers>
         <developer>
             <name>Michael Semb Wever</name>
@@ -72,15 +70,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    </properties>
 
-    <repositories>
-        <!-- need this to find parent -->
-        <repository>
-            <id>Sesat</id>
-            <name>Sesat Maven2 Repository</name>
-            <url>http://sesat.no/maven2</url>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>log4j</groupId>
@@ -91,9 +80,24 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    <build>
+
+        <plugins>
+        <!-- Set the source to UTF 8 -->
+            <plugin>
+                <inherited>true</inherited>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 <!-- - - - - - - - - - - -->
-<!-- OTHER   INFORMATION -->
+<!-- DISTRIBUTION        -->
 <!-- - - - - - - - - - - -->
 
     <distributionManagement>
@@ -112,5 +116,52 @@
             <url>scp://shell.sourceforge.net:/home/project-web/commons-reflect/htdocs</url>
         </site>
     </distributionManagement>
+
+
+<!-- - - - - - - - - - - -->
+<!-- REPORTING        -->
+<!-- - - - - - - - - - - -->
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changelog-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <type>range</type>
+                    <range>3650</range>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.8</version>
+                <reportSets>
+                    <reportSet>
+                        <id>html</id>
+                        <configuration>
+                            <charset>${project.build.sourceEncoding}</charset>
+                            <docencoding>${project.build.sourceEncoding}</docencoding>
+                            <source>1.6</source>
+                            <docfilessubdirs>true</docfilessubdirs>
+                            <links>
+                                <link>http://java.sun.com/javase/6/docs/api/</link>
+                                <link>http://java.sun.com/javaee/5/docs/api/</link>
+                                <link>http://logging.apache.org/log4j/docs/api/</link>
+                            </links>
+                        </configuration>
+                        <reports>
+                            <report>javadoc</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- - Copyright (2005-2009) Schibsted Søk AS
+ - Copyright (2007-2011) Schibsted ASA
  *   This file is part of Sesat Commons.
  *
  *   Sesat Commons is free software: you can redistribute it and/or modify
@@ -63,18 +63,6 @@
         </developer>
     </developers>
 
-    <mailingLists>
-        <mailingList>
-            <name>User &amp; Development List</name>
-            <post>commons-reflect-user@lists.sourceforge.net</post>
-            <archive>http://sourceforge.net/mailarchive/forum.php?forum_name=commons-reflect-user</archive>
-        </mailingList>
-        <mailingList>
-            <name>Commit List</name>
-            <archive>http://sesat.no/pipermail/commons-commits/</archive>
-        </mailingList>
-    </mailingLists>
-
 <!-- - - - - - - - - - -->
 <!-- BUILD INFORMATION -->
 <!-- - - - - - - - - - -->
@@ -109,9 +97,19 @@
 <!-- - - - - - - - - - - -->
 
     <distributionManagement>
+        <repository>
+            <id>commons-reflect-releases</id>
+            <name>commons-reflect.sf.net releases</name>
+            <url>scp://shell.sourceforge.net:/home/project-web/commons-reflect/htdocs/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>commons-reflect-snapshots</id>
+            <name>commons-reflect.net snapshots</name>
+            <url>scp://shell.sourceforge.net:/home/project-web/commons-reflect/htdocs/snapshots/</url>
+        </snapshotRepository>
         <site>
-          <id>commons-reflect.sf.net</id>
-          <url>scp://216.34.181.119/home/groups/c/co/commons-reflect/htdocs</url>
+            <id>commons-reflect.sf.net</id>
+            <url>scp://shell.sourceforge.net:/home/project-web/commons-reflect/htdocs</url>
         </site>
     </distributionManagement>
 

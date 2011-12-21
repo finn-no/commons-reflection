@@ -2,7 +2,7 @@ Java's Proxy class has poor performance under multi-threaded environments.
 Under high concurrency it can completely lock a jvm up.
 
 This simple library has a ConcurrentProxy implementation that is basically a copy of Proxy but
-changes the caching mechanism from using a Hashtable to a ConcurrentMap. 
+changes the caching mechanism from using a HashMap surrounded with hard synchronization to a ConcurrentMap. 
 It is a drop in replacement for the Proxy class.
 
 If you'd like to see this included in Java go vote on

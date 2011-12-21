@@ -16,19 +16,19 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with Sesat Commons.  If not, see <http://www.gnu.org/licenses />.
  -
- - $Id: project.xml 2296 2006-02-14 17:33:59Z magnuse $ 
+ - $Id: project.xml 2296 2006-02-14 17:33:59Z magnuse $
 -->
-<project 
+<project
         xmlns="http://maven.apache.org/POM/4.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-            
+
     <parent>
       <groupId>sesat</groupId>
       <artifactId>commons-main</artifactId>
       <version>1.9</version>
     </parent>
-   
+
     <modelVersion>4.0.0</modelVersion>
     <name>Commons Reflection</name>
     <artifactId>commons-reflect</artifactId>
@@ -40,23 +40,23 @@
 <!-- - - - - - - - - - - -->
 
     <description>
-        Reflection utilities. 
+        Reflection utilities.
          Provides utilities to or faster implementations of classes found in java.lang.reflect.
 
          Openjdk request for inclusion: https://bugs.openjdk.java.net/show_bug.cgi?id=100120
     </description>
-    <url>http://commons-reflect.sourceforge.net/</url>
+    <url>http://commons-reflect.sf.net/</url>
 
     <scm>
-        <connection>scm:svn:http://sesat.no/svn/sesat-commons/commons-reflect/trunk</connection>
-        <developerConnection>scm:svn:http://sesat.no/svn/sesat-commons/commons-reflect/trunk</developerConnection>
-        <url>http://sesat.no/svn/sesat-commons/commons-reflect/trunk</url>
+        <connection>scm:git:git://github.com/finn-no/commons-reflection/</connection>
+        <developerConnection>scm:git:git://github.com/finn-no/commons-reflection/</developerConnection>
+        <url>https://github.com/finn-no/commons-reflection</url>
     </scm>
 
     <developers>
         <developer>
             <name>Michael Semb Wever</name>
-            <id>ssmiweve</id>
+            <id>mck</id>
             <email>mick@semb.wever.org</email>
             <url>http://semb.wever.org</url>
             <timezone>+1</timezone>
@@ -85,6 +85,7 @@
    </properties>
 
     <repositories>
+        <!-- need this to find parent -->
         <repository>
             <id>Sesat</id>
             <name>Sesat Maven2 Repository</name>

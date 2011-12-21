@@ -1,4 +1,4 @@
-/* Copyright (2007) Schibsted Søk AS
+/* Copyright (2007-2011) Schibsted ASA
  *   This file is part of Sesat Commons.
  *
  *   Sesat Commons is free software: you can redistribute it and/or modify
@@ -35,7 +35,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * dynamic proxy classes created by those methods.
  *
  * This class provides faster concurrent caching of Proxies through ConcurrentHashMaps,
- *  It delegates back to java.lang.reflect.Proxy for 
+ *  It delegates back to java.lang.reflect.Proxy for
  *   the construction of new Proxies and the required synchronisation surrounding it.
  *
  * @author	@author <a href="mailto:mick@wever.org">Mck Semb Wever</a>
@@ -43,14 +43,14 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * @see		java.lang.reflect.Proxy
  */
 public final class ConcurrentProxy {
-    
+
     /** parameter types of a proxy class constructor */
     private static final Class[] constructorParams = {InvocationHandler.class};
 
     /** maps a class loader to the proxy class cache for that loader */
-    private static final Map<ClassLoader,Map<Object,Reference<Class>>> loaderToCache 
+    private static final Map<ClassLoader,Map<Object,Reference<Class>>> loaderToCache
             = new WeakHashMap<ClassLoader,Map<Object,Reference<Class>>>();
-    
+
     private static final ReentrantReadWriteLock loaderToCacheLock = new ReentrantReadWriteLock();
 
     /**
@@ -133,9 +133,9 @@ public final class ConcurrentProxy {
      * @throws	NullPointerException if the <code>interfaces</code> array
      *		argument or any of its elements are <code>null</code>
      */
-    public static Class<?> getProxyClass(final ClassLoader loader, final Class<?>... interfaces) 
+    public static Class<?> getProxyClass(final ClassLoader loader, final Class<?>... interfaces)
             throws IllegalArgumentException {
-        
+
         // ---
         // start of copy from java.lang.reflect.Proxy
         // ---
@@ -215,11 +215,11 @@ public final class ConcurrentProxy {
                 loaderToCacheLock.writeLock().unlock();
             }
         }
-        
+
         // ---
         // end of copy from java.lang.reflect.Proxy
         // ---
-        
+
         Object value = cache.get(key);
         if (value instanceof Reference) {
             proxyClass = (Class) ((Reference) value).get();
@@ -230,7 +230,7 @@ public final class ConcurrentProxy {
             cache.put(key, new WeakReference<Class>(proxyClass));
         }
         return proxyClass;
-        
+
     }
 
     // ---
@@ -266,10 +266,10 @@ public final class ConcurrentProxy {
      *		<code>null</code>
      */
     public static Object newProxyInstance(
-            final ClassLoader loader, 
-            final Class<?>[] interfaces, 
+            final ClassLoader loader,
+            final Class<?>[] interfaces,
             final InvocationHandler h) throws IllegalArgumentException {
-        
+
         if (h == null) {
             throw new NullPointerException();
         }

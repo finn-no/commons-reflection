@@ -7,3 +7,8 @@ It is a drop in replacement for the Proxy class.
 
 If you'd like to see this included in Java go vote on
 https://bugs.openjdk.java.net/show_bug.cgi?id=100120
+
+Licensed under "GPLv3 with Classpath Exception" so that it remains compatible with OpenJDK (since it is a derivative of the Proxy class).
+Although this work is submitted to the Java Bug Database
+  http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7123493
+so one is also free to use it from there under Oracle's terms.
